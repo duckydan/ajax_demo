@@ -1,0 +1,6 @@
+name: TVA Ajax demo
+description: Making a view block refresh using Ajax with a new contextual filter each time
+package: TVA
+
+type: module
+core: 8.x
