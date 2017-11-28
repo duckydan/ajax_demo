@@ -1,6 +1,7 @@
 demo:
   js:
     js/demo.js: {}
+    js/date.js: {}
   css:
     module:
       css/demo.css: {}
@@ -10,3 +11,4 @@ demo:
     - core/jquery.once
     - core/drupal.ajax
     - core/views.ajax
+    

@@ -1,0 +1,25 @@
+uuid: 2e8ecf9d-d491-4838-bbb8-7bcd214c6d73
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:390a59dd-fac5-4da2-8e64-c1a791cac270'
+  module:
+    - block_content
+  theme:
+    - bootstrap
+id: calendarpager
+theme: bootstrap
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'block_content:390a59dd-fac5-4da2-8e64-c1a791cac270'
+settings:
+  id: 'block_content:390a59dd-fac5-4da2-8e64-c1a791cac270'
+  label: 'Calendar pager'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

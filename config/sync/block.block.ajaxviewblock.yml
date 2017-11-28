@@ -1,0 +1,20 @@
+uuid: f2145bbf-3f01-46d6-be57-7f1a1d2ed850
+langcode: en
+status: true
+dependencies:
+  module:
+    - ajax_view_demo
+  theme:
+    - bootstrap
+id: ajaxviewblock
+theme: bootstrap
+region: sidebar_first
+weight: 0
+provider: null
+plugin: ajax_view_block
+settings:
+  id: ajax_view_block
+  label: 'Ajax view block'
+  provider: ajax_view_demo
+  label_display: visible
+visibility: {  }

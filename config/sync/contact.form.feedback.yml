@@ -1,0 +1,14 @@
+uuid: 8c1e619d-88ae-4868-918d-5e08d956958e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vymHlgJy26BuI5GGj9-IXjwR3dRC5C0tij4BpWJnoqw
+id: feedback
+label: 'Website feedback'
+recipients:
+  - develand@gmail.com
+reply: ''
+weight: 0
+message: 'Your message has been sent.'
+redirect: ''
