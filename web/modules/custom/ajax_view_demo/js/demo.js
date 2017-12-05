@@ -1,7 +1,7 @@
 (function ($, Drupal, drupalSettings) {
 
     var element = document.getElementById('calendar-today');
-    
+
     element.onclick = function() {
         // This is where the actual date calculations will go
         console.log(this);
@@ -35,6 +35,15 @@
 
    }
 
+  $(document).ready(function() {
+    $('#calendar').fullCalendar({
+      navLinks: true,
+      height: 'auto',
+      navLinkDayClick: function(date, jsEvent) {
+        window.location.href = drupalSettings.path.baseUrl + 'archives/' + date.format("YYYY/MM/DD");
+      }
+    });
+  });
 })(jQuery, Drupal, drupalSettings);
 
 
@@ -44,5 +53,5 @@
 //   $( ".calendar-today" ).trigger('click');
 //   $( ".calendar-today" ).trigger('click');
 //  alert('the starting value is: ' + sessionStorage.getItem('date'));
-// 
+//
 // });

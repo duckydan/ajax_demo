@@ -1,9 +1,12 @@
 demo:
   js:
+    js/moment.js: {}
+    js/fullcalendar.min.js: {}
     js/demo.js: {}
     js/date.js: {}
   css:
     module:
+      css/fullcalendar.min.css: {}
       css/demo.css: {}
   dependencies:
     - core/drupal
@@ -11,4 +14,4 @@ demo:
     - core/jquery.once
     - core/drupal.ajax
     - core/views.ajax
-    
+
