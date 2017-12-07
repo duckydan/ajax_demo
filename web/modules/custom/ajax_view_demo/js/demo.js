@@ -36,12 +36,36 @@
    }
 
   $(document).ready(function() {
+    var dates;
     $('#calendar').fullCalendar({
-      navLinks: true,
+      navLinks: false,
       height: 'auto',
-      navLinkDayClick: function(date, jsEvent) {
-        window.location.href = drupalSettings.path.baseUrl + 'archives/' + date.format("YYYY/MM/DD");
-      }
+      defaultView: 'month',
+      viewRender: function(view, element) {
+         $.ajax({
+          url: '/ajax_view_demo/demo_resource/' + view.intervalStart.format() + '?_format=json',
+          type: 'GET',
+           success: function(response) {
+            dates = response;
+            $('.fc-content-skeleton .fc-day-top').each(function() {
+              var dataDate = $(this).attr('data-date');
+              var hasPost = dates.indexOf(dataDate);
+              if (hasPost != -1) {
+                $(this).addClass('has-post');
+              }
+            });
+          },
+          error: function(response) {
+            console.log(response);
+          }
+        });
+      },
+      dayClick: function(date, jsEvent, view) {
+        var a = dates.indexOf(date.format("YYYY-MM-DD"));
+        if (a != -1) {
+         window.location.href = drupalSettings.path.baseUrl + 'archives/' + date.format("YYYY/MM/DD");
+        }
+      },
     });
   });
 })(jQuery, Drupal, drupalSettings);
