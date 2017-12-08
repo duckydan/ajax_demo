@@ -10,3 +10,9 @@
     background-color: #eeeeee;
     height: 300px;
 }
+
+.has-post {
+  color: #337ab7;
+  font-weight: bold;
+  cursor: pointer;
+}
